@@ -40,3 +40,21 @@
     \end{enumerate}
 \end{itemize}
 
+\begin{itemize}
+    \item When solving a question involving strictly increasing number sequence, it's always a good idea to replace the $a_i$ with $a_i - i$.
+    \begin{enumerate}
+        \item It changes the constraint from strictly increasing to non-decreasing (allowing the equality constraint), which is generally very useful
+        \item It puts contiguous groups of elements together (example, if $4, 5, 6, 7$ appear together in this order, they'll all be changed to the same number)
+        \item Example problems where this technique was used: Edu 87 E, AGC 48 C.
+    \end{enumerate}
+\end{itemize}
+
+\begin{itemize}
+    \item If a question requires you to use two data structures in parallel, do this technique
+    \item Run the first DS independently of the other and memoize its results.
+    \item Then run the second DS and use memoized results from the first one.
+    \begin{enumerate}
+        \item This relies on the fact that this technically is still *online* processing, but the computations for the independent (first) DS are made independent of the second one, so they can be done more easily
+        \item Example question: USACO 2019 USO Platinum Valleys 
+    \end{enumerate}
+\end{itemize}
